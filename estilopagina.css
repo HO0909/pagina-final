@@ -1,0 +1,397 @@
+definir una fuente web (en este caso, desde Google Fonts) */
+
+:root{ /* Acá definimos valores que podemos utilizar a lo largo
+    de todos los estilos que apliquemos, ya sean colores, tamaños, fuentes, etc. */
+
+    --color-uno: #0EC8D1; /* para definir valores usamos los dos guines -- al principio */
+    --color-dos: #11949A;
+    --color-tres: #1CF07D;
+    --color-cuarto: #0DEDF1;
+    --fuente-principal: arial black italic, sans-serif;
+}
+
+*{ /* selector global - las propiedades definidas acá se aplican a todos los elementos */
+
+    margin: 0; /* margin define el espaciado alrededor de un elemento */
+    padding: 0; /* padding define el espaciado interno de un elemento con respecto a sus límites */
+    box-sizing: border-box; /* esto es para que no se añada tamaño a un elemento */
+}
+
+#linea{
+    width: 100%;
+    height: 35px;
+    background: #2DB1BD;
+}
+#linea2{
+    width: 100%;
+    height: 35px;
+    background: #3AEB16;
+}
+
+
+
+.links a, 
+.links-escritorio a{
+    color: white; /* cambia color de texto */
+    padding: 6px 10px;
+    text-decoration: none; /* define la decoración del texto: subrayado, tachado, etc.; definimos "none" para que no tenga ninguna decoración */
+
+    
+     text-align: center; /* define la alineación del texto, puede ser center, left, right o justify */
+}
+.links a:hover, 
+.links-escritorio a:hover{
+    background-color: white;
+    color: var(--color-uno); /* para definir el color del texto */
+}
+
+.links a{
+
+}
+
+.links-escritorio a{
+    font-weight: 600;
+}
+.links-escritorio a:hover{
+    text-decoration: underline;
+}
+
+.links,
+.links-escritorio{
+    display: none; /* para que un elemento no se muestre */
+}
+.fa-bars{
+    color: white;
+    font-size: 30px; /* tamaño del texto */
+}
+#check-burger{
+    display: none;
+}
+
+#check-burger:checked + .links{ /* el problema era que debíamos tomar cuando el checkbox estuviera chequeado */
+    
+    /* ESTO LO PUSE DESPUÉS DE LA SESIÓN */
+    display: flex;
+    flex-direction: column; /* definimos que los elementos se ordenarán hacia abajo */
+    width: 100%;
+}
+
+
+
+header{
+    background-color: rgb(134, 134, 134);
+    background-blend-mode: multiply; /* define cómo se comportará la imagen con el color de fondo (multiply enfatiza los oscuros, por eso en un fondo negro no se ve nada) */
+    background-image: url("https://images.unsplash.com/photo-1591851459144-fd94bef2efc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-size: cover; /* comportamiento de tamaño de la imagen (cover es para cubrir todo el contenedor) */
+}
+
+.header-contenedor{
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header-contenedor h1{
+    margin-bottom: 10px;
+}
+.header-contenedor p{
+   
+    color: #CF2F18;
+    font-family: arial black;
+    margin-bottom: 20px;
+}
+
+
+.sec-1-contenedor{
+     background: #F6FDC6;
+    text-align: center;
+    background-:  #851B0C;
+    padding: 40px 20px;
+    font-family: arial;
+}
+.sec-1-contenedor h2{
+    margin-bottom: 10px;
+    color: #5D261E;
+    font-family: arial black;
+}
+
+
+.sec-2-contenedor{
+    background: #EAD0FC;
+    padding: 40px 20px;
+    display: grid; /* vuelve al contenedor una cuadrícula (por defecto será una cuadrícula de una sola columna) */
+    gap: 20px; /* separación entre los elementos de la cuadrícula (funciona sólo con display: grid;) */
+}
+
+.beneficio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0B3E3F;
+}
+
+.beneficio span{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.beneficio h4{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #168089;
+
+}
+
+
+
+
+.sec-3-contenedor{
+    display: grid;
+    gap: 20px;
+    color: black;
+    padding: 20px;
+    background: #0C9092;
+    align-content: center; /* alinea todo el contenido del contenedor al centro (center, pero podemos cambiarlo) vertical del mismo (sólo es visible si el contenido es menor al alto del contenedor */
+    align-items: center; /* alinea los elementos dentro de sus respectivas columnas (en este caso, al centro) */
+    justify-content: center;/* alinea todo el contenido del contenedor al centro (center, pero podemos cambiarlo) horizontal del mismo (sólo es visible si el contenido es menor al ancho del contenedor */
+    justify-items: center;/* alinea los elementos dentro de sus respectivas filas (en este caso, al centro) */
+}
+.nombre1{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre2{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre3{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre4{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre5{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre6{
+    font-family: arial black;
+    color: yellow
+}
+
+.nombre7{
+    font-family: arial black;
+    color: yellow
+}
+
+#final{
+    background: #26FBEE;
+    font-family: arial black;
+    color:black;
+}
+
+
+
+.card{
+    display: flex;
+    background: #9B148B;
+    flex-direction: column;
+    align-items: center;
+    font-family: arial black;
+    color: white;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    /* box-shadow define una sombra para el contenedor; los valores son:
+
+    box-shadow: dx dy esp color
+    
+    dx: desplazamiento en x
+    dy: desplazamiento en y
+    esp: esparcimiento
+    */
+    
+    padding: 10px;
+    border-radius: 10px; /* para redondear las esquinas del elemento */
+    max-width: 300px; 
+    width: 200px;
+    transition: transform 0.3s ease-in-out;/* permite definir una transición a otro estado (en este caso la propiedad en la que se observará la transición es transform) */
+}
+.card:hover{
+    transform: scale(1.05); /* transform puede cambiar tamaño, posición y rotación de un elemento (en este caso cambiamos el tamaño (escala) a una más grande de lo normal) */
+}
+
+.card img{
+    height: 120px;
+}
+
+.card span{
+    background-color: var(--color-tres);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    align-self: start; /* sobreescribe (sustituye) la propiedad align-items del elemento padre (en este caso, el elemento padre, que es .sec-3-contenedor, tiene align-items: center) */
+}
+
+
+
+footer .contenedor{
+    background: #17DACE;
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    font-family: arial black;
+}
+
+.campo{
+    margin-bottom: 10px;
+}
+
+.campo label{
+    color: var(--color-dos);
+    display: block;
+}
+.campo input,
+.campo textarea{
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--color-cuarto);
+    width: 100%;
+    color: var(--color-dos);
+}
+
+form button{
+    background-color: var(--color-cuarto);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    transition: transform .2s ease-in-out;
+}
+form button:hover{
+    transform: scale(1.05);
+}
+
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-links{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.social-links a{
+    font-size: 40px;
+    color: var(--color-uno);
+    transition: transform .2s ease-in-out, color .2s ease-in-out;
+}
+.social-links a:hover{
+    transform: scale(1.2);
+}
+
+.icono-facebook:hover{
+    color: rgb(67, 67, 230);
+}
+.icono-twitter:hover{
+    color: rgb(67, 178, 230);
+}
+.icono-whatsapp:hover{
+    color: rgb(29, 211, 90);
+}
+.icono-linkedin:hover{
+    color: rgb(59, 42, 156);
+}
+.icono-instagram:hover{
+    color: rgb(241, 178, 94);
+}
+
+
+
+
+.boton{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.3s; /* definimos una transición para todas las propiedades */
+}
+.boton:hover{
+    color: var(--color-dos);
+    background-color: #fff;
+}
+
+@media (min-width: 600px){ /* definimos el ancho mínimo en el que las propiedades de dentro de estas llaves surtirán efecto */
+    .fa-bars{
+        display: none;
+    }
+    #check-burger:checked + .links{
+        display: none;
+    }
+    .links-escritorio{
+        display: block; /* para que el elemento se muestre como bloque (ocupando todo el ancho de su elemento padre) */
+    }
+
+    .header-contenedor h1{
+        font-size: 50px;
+    }
+
+
+    .sec-2-contenedor, 
+    .sec-3-contenedor{
+        grid-template-columns: 1fr 1fr; /* definimos las columnas que tendrá nuestra cuadrícula (en este caso son dos columnas del mismo tamaño) */
+    }
+
+    footer .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .contenedor h2,
+    footer .contenedor p{
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (min-width: 900px){
+    .sec-2-contenedor,
+    .sec-3-contenedor{
+        grid-template-columns: 1fr 1fr 1fr; /* en este punto de quiebre serán 3 columnas */
+    }
+}
+#linea2{
+    width: 100%;
+    height: 35px;
+    background: #12756F;
+}
+
+#Pie {
+    color: black;
+    font-family: arial black;
+    background: #E730EC;
+    text-align: center;
+
+
+}
+
+#Pie1 {
+    color: yellow;
+    font-family: arial black;
+    background: #178D89;
+    text-align: center;
+    }
